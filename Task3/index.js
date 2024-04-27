@@ -43,10 +43,12 @@ async function result() {
         if (item && item.range) {
             const [start, end] = item.range;
             if (item.type === '2') {
-                result.push(sumArray2[end] - (start > 2 ? sumArray2[start - 1] : 0));
+                const sum1 = sumArray2[end] - (start > 0 ? sumArray2[start - 1] : 0)
+                const sum2 = sumArray1[end] - (start > 0 ? sumArray1[start - 1] : 0)
+                result.push(sum1 - sum2);
             } else if (item.type === '1') {
                 const sum1 = sumArray2[end] - (start > 0 ? sumArray2[start - 1] : 0)
-                const sum2 = sumArray1[end] - (start > 2 ? sumArray1[start - 1] : 0)
+                const sum2 = sumArray1[end] - (start > 0 ? sumArray1[start - 1] : 0)
                 result.push(sum1 + sum2);
             }
         }

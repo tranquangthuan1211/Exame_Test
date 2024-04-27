@@ -1,4 +1,5 @@
 ## Trần Quang Thuận
+# Link git: https://github.com/tranquangthuan1211/Exame_Test
 1. Chạy Task1 
  * cd tới thư mục Task1 
  * pip3 install thư viện request và pandas của Python
